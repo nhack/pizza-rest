@@ -7,7 +7,8 @@
 
 var Pizza = require('../api/pizza/pizza.model');
 
-Pizza.find({}).remove(function() {
+Pizza.count({}, function (err, count) {
+  if (count == 0) {
     Pizza.create({
       "name": "4 STAGIONI",
       "price": 27.5,
@@ -71,4 +72,5 @@ Pizza.find({}).remove(function() {
         "createdOn": 1397490980837
       }]
     });
+  }
 });
