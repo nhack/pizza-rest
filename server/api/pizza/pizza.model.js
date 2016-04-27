@@ -9,6 +9,7 @@ var PizzaSchema = new Schema({
   weight: Number,
   ingredients: String,
   extras: String,
+  image: String,
   images:[String],
   category: { type: Schema.Types.ObjectId, ref: 'Category' },
   reviews: [
